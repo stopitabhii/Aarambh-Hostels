@@ -1,7 +1,10 @@
-import { useState } from 'react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { Phone } from 'lucide-react';
 import { ROOMS, HOSTEL } from '../lib/constants';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const scrollTo = (href) => document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
 
@@ -39,7 +42,6 @@ export default function Rooms() {
 }
 
 function RoomCard({ room, delay }) {
-  const [imgIdx, setImgIdx] = useState(0);
   const ref = useScrollReveal();
 
   return (
@@ -48,34 +50,29 @@ function RoomCard({ room, delay }) {
       className="reveal group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-orange-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
       style={{ transitionDelay: `${delay}ms` }}
     >
-      {/* Image with dot switcher */}
-      <div className="relative h-56 overflow-hidden bg-gray-100">
+      {/* Swipeable image gallery */}
+<div className="relative h-56 bg-gray-100">
+  <span className={`absolute top-3 left-3 z-10 text-white text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-full ${room.labelColor}`}>
+    {room.label}
+  </span>
+  <Swiper
+    modules={[Pagination]}
+    pagination={{ clickable: true }}
+    loop={room.images.length > 1}
+    className="h-full w-full"
+  >
+    {room.images.map((src, i) => (
+      <SwiperSlide key={i}>
         <img
-          src={room.images[imgIdx]}
-          alt={`${room.title} at Aarambh Hostel Greater Noida`}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          src={src}
+          alt={`${room.title} at Aarambh Hostel Greater Noida — photo ${i + 1}`}
+          className="w-full h-full object-cover"
           loading="lazy"
         />
-        {/* Badge */}
-        <span className={`absolute top-3 left-3 text-white text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-full ${room.labelColor}`}>
-          {room.label}
-        </span>
-        {/* Image dot switcher */}
-        {room.images.length > 1 && (
-          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
-            {room.images.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setImgIdx(i)}
-                aria-label={`View photo ${i + 1}`}
-                className={`rounded-full transition-all duration-200 ${
-                  i === imgIdx ? 'bg-white w-4 h-1.5' : 'bg-white/50 w-1.5 h-1.5'
-                }`}
-              />
-            ))}
-          </div>
-        )}
-      </div>
+      </SwiperSlide>
+    ))}
+  </Swiper>
+</div>
 
       {/* Body */}
       <div className="p-5">
