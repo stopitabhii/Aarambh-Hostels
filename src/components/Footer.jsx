@@ -117,8 +117,15 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-2 pt-5 text-xs text-gray-600">
           <p>© {year} {HOSTEL.name}. All rights reserved.</p>
           <p>
-            Designed for{' '}
-            <span className="text-orange-500 font-semibold">college students of Greater Noida</span>
+            crafted by{' '}
+            <a
+              href="https://github.com/stopitabhii"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-orange-500 font-semibold hover:text-orange-400 underline-offset-2 transition-colors"
+              >
+                abstree
+            </a>
           </p>
         </div>
       </div>
