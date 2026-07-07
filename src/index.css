@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --color-orange: #E8441A;
+  --color-orange-dark: #c73616;
+  --color-gold: #D4A017;
+  --color-cream: #FDFAF6;
+  --color-dark: #1a1a1a;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: #FDFAF6;
+  color: #2d2d2d;
+  overflow-x: hidden;
+}
+
+/* Scroll reveal base */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Swiper gallery overrides */
+.swiper-pagination-bullet { background: #E8441A !important; }
+.swiper-button-next,
+.swiper-button-prev { color: #E8441A !important; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #E8441A; border-radius: 10px; }
+
+/* Scroll progress */
+#scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #E8441A, #D4A017);
+  z-index: 9999;
+  transition: width 0.1s linear;
+}
+
+/* Lightbox */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile sticky bar */
+@media (min-width: 768px) {
+  .mobile-sticky-bar { display: none !important; }
+}
