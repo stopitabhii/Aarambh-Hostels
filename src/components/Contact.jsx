@@ -18,8 +18,8 @@ export default function Contact() {
 
   const validate = () => {
     const e = {};
-    if (!form.name.trim())           e.name    = 'Name is required';
-    if (!form.phone.trim())          e.phone   = 'Phone number is required';
+    if (!form.name.trim())  e.name  = 'Name is required';
+    if (!form.phone.trim()) e.phone = 'Phone number is required';
     else if (!/^\d{10}$/.test(form.phone.trim())) e.phone = 'Enter a valid 10-digit number';
     return e;
   };
@@ -37,23 +37,31 @@ export default function Contact() {
 
     setStatus('sending');
 
-    // If EmailJS is configured, use it; otherwise fall back to WhatsApp
     if (EMAILJS_CONFIG.serviceId && EMAILJS_CONFIG.templateId && EMAILJS_CONFIG.publicKey) {
       try {
-        await emailjs.sendForm(
+        // Use emailjs.send() with explicit params from React state —
+        // much more reliable than sendForm() with controlled inputs
+        await emailjs.send(
           EMAILJS_CONFIG.serviceId,
           EMAILJS_CONFIG.templateId,
-          formRef.current,
+          {
+            name:    form.name,
+            phone:   form.phone,
+            email:   form.email   || 'Not provided',
+            room:    form.room    || 'Not specified',
+            message: form.message || 'No message',
+          },
           EMAILJS_CONFIG.publicKey
         );
         setStatus('success');
         setForm({ name: '', phone: '', email: '', room: '', message: '' });
-      } catch {
+      } catch (err) {
+        console.error('EmailJS error:', err);
         setStatus('error');
       }
     } else {
       // Fallback: open WhatsApp with prefilled message
-      const msg = `Hi Aarambh Hostels! I'm ${form.name} and I'm interested in a *${form.room || 'room'}*. My phone: ${form.phone}. ${form.message}`;
+      const msg = `Hi Aarambh Hostels! I'm ${form.name}, interested in ${form.room || 'a room'}. Phone: ${form.phone}. ${form.message}`;
       window.open(`https://wa.me/${HOSTEL.whatsapp}?text=${encodeURIComponent(msg)}`, '_blank');
       setStatus('success');
     }
@@ -77,7 +85,7 @@ export default function Contact() {
           {/* Left — info + map */}
           <div ref={leftRef} className="reveal lg:col-span-2 flex flex-col gap-4">
 
-            {/* One-tap CTAs */}
+            {/* One-tap Call */}
             <a
               href={`tel:${HOSTEL.phones[0]}`}
               className="flex items-center gap-3 bg-orange-500 hover:bg-orange-600 text-white font-bold px-5 py-4 rounded-2xl transition-all hover:-translate-y-0.5 shadow-lg shadow-orange-500/30"
@@ -91,6 +99,7 @@ export default function Contact() {
               </div>
             </a>
 
+            {/* WhatsApp */}
             <a
               href={`https://wa.me/${HOSTEL.whatsapp}?text=${encodeURIComponent('Hi! I want to know about rooms at Aarambh Hostels.')}`}
               target="_blank"
@@ -106,6 +115,7 @@ export default function Contact() {
               </div>
             </a>
 
+            {/* Directions */}
             <a
               href={HOSTEL.googleMapsUrl}
               target="_blank"

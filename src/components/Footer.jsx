@@ -1,4 +1,4 @@
-import { Phone, MapPin } from 'lucide-react';
+import { Phone, MapPin, Mail } from 'lucide-react';
 import { HOSTEL } from '../lib/constants';
 
 const scrollTo = (href) => document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
@@ -109,6 +109,10 @@ export default function Footer() {
                   <a href={`tel:${HOSTEL.phones[1]}`} className="text-xs hover:text-orange-400 transition-colors block">{HOSTEL.phones[1]}</a>
                 </div>
               </div>
+              <div className="flex gap-2 items-center">
+                <Mail size={13} className="text-orange-500 shrink-0" />
+                <a href={`mailto:${HOSTEL.email}`} className="text-xs hover:text-orange-400 transition-colors">{HOSTEL.email}</a>
+              </div>
             </div>
           </div>
         </div>
@@ -119,13 +123,13 @@ export default function Footer() {
           <p>
             crafted by{' '}
             <a
-              href="https://github.com/stopitabhii"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-orange-500 font-semibold hover:text-orange-400 underline-offset-2 transition-colors"
-              >
-                abstree
-            </a>
+            href="https://github.com/stopitabhii"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-orange-500 font-semibold hover:text-orange-400 underline-offset-2 transition-colors"
+          >
+            abstree
+          </a>
           </p>
         </div>
       </div>

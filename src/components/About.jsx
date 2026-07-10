@@ -6,7 +6,7 @@ const PILLARS = [
   { icon: '🛡️', title: 'Safe & Secure',    desc: '24/7 CCTV, security staff, and strict visitor policy — your safety is our top priority.' },
   { icon: '🍽️', title: '4 Meals Daily',    desc: 'Fresh, hygienic, home-style food four times a day, cooked in our in-house kitchen.' },
   { icon: '📶', title: 'Full Wi-Fi',        desc: 'High-speed internet in every room and common area — stay connected, stay ahead.' },
-  { icon: '🚌', title: 'College Transport', desc: 'Scheduled pickup and drop to nearby colleges — no more missing the first lecture.' },
+  { icon: '🚌', title: 'College Transport', desc: 'Scheduled pickup and drop to colleges — no more missing the first lecture.' },
 ];
 
 export default function About() {
@@ -24,7 +24,7 @@ export default function About() {
             <div className="absolute top-0 left-0 right-16 bottom-16 rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src="/images/hero-building.jpg"
-                alt="Aarambh Hostel main building exterior"
+                alt="Aarambh Hostel Facade — Greater Noida"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
@@ -33,7 +33,7 @@ export default function About() {
             <div className="absolute bottom-0 right-0 w-[58%] rounded-2xl overflow-hidden shadow-xl border-4 border-white">
               <img
                 src="/images/building-side.jpg"
-                alt="Aarambh Hostel balcony and side view"
+                alt="Aarambh Hostel multi-floor balconies and side elevation"
                 className="w-full h-44 object-cover"
                 loading="lazy"
               />
