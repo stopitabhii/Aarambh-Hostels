@@ -80,7 +80,7 @@ export default function Hero() {
               onClick={() => {
                 window.dispatchEvent(new CustomEvent('aarambh:tab', { detail: tab }));
               }}
-              className="flex items-center gap-1.5 bg-white/10 border border-white/20 backdrop-blur-sm text-white/90 text-xs font-semibold px-3.5 py-1.5 rounded-full hover:bg-white/20 transition-colors cursor-pointer"
+              className="flex items-center gap-2 bg-orange-500 hover: bg-orange-400 border border-orange-400 text-white text-sm font-bold px-5 py-2.5 rounded-full transition-all-hover:-translate-y-0.5 shadow-lg shadow-orange-500/30 cursor-pointer"
             >
               <Icon size={12} className="text-amber-400" />
               {label}
