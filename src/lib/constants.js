@@ -5,7 +5,7 @@ export const HOSTEL = {
   type: 'Boys Hostel',
   phones: ['7827024959', '7827124959'],
   whatsapp: '917827024959',
-  email: 'info@aarambhhostels.in',
+  email: 'aarambhhostels@gmail.com',
   address: {
     line1: 'H-181, Beta 2',
     line2: 'Block H',
@@ -20,11 +20,12 @@ export const HOSTEL = {
 
 // ─── Trust Badges ─────────────────────────────────────────────────────────────
 export const TRUST_BADGES = [
+  '2 Hostels',
+  '5 PGs',
+  '730+ Students',
   '24×7 Security',
   '4 Meals / Day',
-  'High-Speed Wi-Fi',
-  'Daily Housekeeping',
-  'RO Drinking Water',
+  'No Hidden Charges',
   'Near Top Colleges',
   'Friendly Environment',
   'No Security Deposit',
@@ -90,29 +91,18 @@ export const ROOMS = [
 
 // ─── Gallery ──────────────────────────────────────────────────────────────────
 export const GALLERY_IMAGES = [
-  { src: '/images/hero-building.jpg',   alt: 'Aarambh Hostel main building exterior — Beta 2, Greater Noida' },
-  { src: '/images/building-back.jpg',   alt: 'Aarambh Hostel building back view with lush green trees' },
-  { src: '/images/building-side.jpg',   alt: 'Aarambh Hostel multi-floor balconies and side elevation' },
-  { src: '/images/corridor.jpg',        alt: 'Bright spacious hostel corridor with artwork and garden view' },
-  { src: '/images/room-double.jpg',     alt: 'Double sharing room with AC, wardrobe and study table' },
-  { src: '/images/room-double-3.jpg',   alt: 'Double sharing room with blue bedsheets and wardrobe' },
-  { src: '/images/room-double-4.jpg',   alt: 'Double sharing room with gold stripe accent wall' },
-  { src: '/images/room-triple.jpg',     alt: 'Triple sharing room with green accent wall and ceiling fan' },
-  { src: '/images/room-triple-2.jpg',   alt: 'Triple sharing room with gold stripe wall and study desk' },
-  { src: '/images/bathroom.jpg',        alt: 'Clean hostel bathroom with shower, WC and washbasin' },
-  { src: '/images/bathroom-2.jpg',      alt: 'Hostel bathroom with grey tiles, shower and modern fittings' },
+  { src: '/images/Hostel-Beta-2/hero-building.jpg',   alt: 'Aarambh Hostel main building exterior — Beta 2, Greater Noida' },
+  { src: '/images/Hostel-Beta-2/building-back.jpg',   alt: 'Aarambh Hostel building back view with lush green trees' },
+  { src: '/images/Hostel-Beta-2/building-side.jpg',   alt: 'Aarambh Hostel multi-floor balconies and side elevation' },
+  { src: '/images/Hostel-Beta-2/corridor.jpg',        alt: 'Bright spacious hostel corridor with artwork and garden view' },
+  { src: '/images/Hostel-Beta-2/room-double.jpg',     alt: 'Double sharing room with AC, wardrobe and study table' },
+  { src: '/images/Hostel-Beta-2/room-double-3.jpg',   alt: 'Double sharing room with blue bedsheets and wardrobe' },
+  { src: '/images/Hostel-Beta-2/room-double-4.jpg',   alt: 'Double sharing room with gold stripe accent wall' },
+  { src: '/images/Hostel-Beta-2/room-triple.jpg',     alt: 'Triple sharing room with green accent wall and ceiling fan' },
+  { src: '/images/Hostel-Beta-2/room-triple-2.jpg',   alt: 'Triple sharing room with gold stripe wall and study desk' },
+  { src: '/images/Hostel-Beta-2/bathroom.jpg',        alt: 'Clean hostel bathroom with shower, WC and washbasin' },
+  { src: '/images/Hostel-Beta-2/bathroom-2.jpg',      alt: 'Hostel bathroom with grey tiles, shower and modern fittings' },
 ];
-
-// ─── Multi-Branch Architecture (FUTURE — do not implement yet) ────────────────
-// When the client adds new branches, add each branch as an entry here.
-// Each branch will eventually get its own route: /branches/beta-2, /branches/alpha-1 etc.
-// Example structure (commented out until needed):
-//
-// export const BRANCHES = [
-//   { id: 'beta-2',  name: 'Beta 2',  address: 'H-181, Beta 2, Greater Noida', phone: '7827024959' },
-//   { id: 'alpha-1', name: 'Alpha 1', address: '...',                           phone: '...' },
-//   { id: 'gamma',   name: 'Gamma',   address: '...',                           phone: '...' },
-// ];
 
 // ─── Nearby Colleges ──────────────────────────────────────────────────────────
 export const COLLEGES = [

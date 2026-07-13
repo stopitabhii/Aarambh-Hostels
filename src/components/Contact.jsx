@@ -73,10 +73,10 @@ export default function Contact() {
         <div ref={headRef} className="reveal text-center max-w-xl mx-auto mb-12">
           <p className="text-xs font-bold tracking-[3px] uppercase text-orange-500 mb-2">Get in Touch</p>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight">
-            Contact Aarambh Hostels
+            Get in Touch with Us
           </h2>
           <p className="text-gray-500 mt-3 leading-relaxed">
-            Ready to visit? Call us, WhatsApp, or fill the form below and we'll get back to you within a few hours.
+            Interested in a hostel or a PG? Call us, WhatsApp, or fill the form below and we'll help you find the right branch.
           </p>
         </div>
 

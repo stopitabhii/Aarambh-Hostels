@@ -6,9 +6,9 @@ const scrollTo = (href) => document.querySelector(href)?.scrollIntoView({ behavi
 
 // Service types — Hostel · PG · Café
 const SERVICES = [
-  { icon: Home,      label: 'Hostel' },
-  { icon: BedDouble, label: 'PG'     },
-  { icon: Coffee,    label: 'Café'   },
+  { icon: Home,      label: 'Hostel', href: 'hostels' },
+  { icon: BedDouble, label: 'PG',     href: 'pgs' },
+  { icon: Coffee,    label: 'Café',   href: 'cafes' },
 ];
 
 export default function Hero() {
@@ -20,7 +20,7 @@ export default function Hero() {
       {/* Real building photo as background */}
       <div className="absolute inset-0">
         <img
-          src="/images/hero-building.jpg"
+          src="/images/Hostel-Beta-2/hero-building.jpg"
           alt="Aarambh Hostel building exterior — Beta 2, Greater Noida"
           className="w-full h-full object-cover object-center"
           fetchpriority="high"
@@ -40,7 +40,7 @@ export default function Hero() {
           className="mb-5"
         >
           <img
-            src="/images/logo-2.jpg"
+            src="/images/Hostel-Beta-2/logo-2.jpg"
             alt="Aarambh Hostels & PG logo"
             className="h-14 w-auto mx-auto rounded-lg shadow-lg"
           />
@@ -53,7 +53,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.12 }}
           className="inline-flex items-center gap-2 bg-orange-500/20 border border-orange-400/40 text-orange-200 text-xs font-semibold tracking-[2px] uppercase px-4 py-1.5 rounded-full mb-5 backdrop-blur-sm"
         >
-          <MapPin size={11} /> Boys Hostel · Beta 2, Greater Noida
+          <MapPin size={11} /> Hostels · PG · Café · Greater Noida
         </motion.div>
 
         {/* Headline */}
@@ -74,14 +74,17 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.32 }}
           className="flex items-center justify-center gap-2 mb-6"
         >
-          {SERVICES.map(({ icon: Icon, label }, i) => (
-            <span
+          {SERVICES.map(({ icon: Icon, label, tab }, i) => (
+            <button
               key={label}
-              className="flex items-center gap-1.5 bg-white/10 border border-white/20 backdrop-blur-sm text-white/90 text-xs font-semibold px-3.5 py-1.5 rounded-full"
+              onClick={() => {
+                window.dispatchEvent(new CustomEvent('aarambh:tab', { detail: tab }));
+              }}
+              className="flex items-center gap-1.5 bg-white/10 border border-white/20 backdrop-blur-sm text-white/90 text-xs font-semibold px-3.5 py-1.5 rounded-full hover:bg-white/20 transition-colors cursor-pointer"
             >
               <Icon size={12} className="text-amber-400" />
               {label}
-            </span>
+            </button>
           ))}
         </motion.div>
 
@@ -90,10 +93,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55, delay: 0.38 }}
-          className="text-white/70 text-base sm:text-lg leading-relaxed max-w-lg mx-auto mb-7"
+          className="text-white/67 text-base sm:text-lg leading-relaxed max-w-lg mx-auto mb-7"
         >
-          Premium boys hostel in Greater Noida — safe, affordable, and built
-          for college students who want to focus on what matters most.
+          Aarambh is Greater Noida's most trusted student living brand — 2 Hostels, 5 PGs, and 2 Cafés built around comfort, safety, and community.
         </motion.p>
 
         {/* ── No Deposit badge ── */}
@@ -107,9 +109,6 @@ export default function Hero() {
           <div className="text-left">
             <p className="text-white text-sm font-bold leading-tight">
               No Security Deposit &nbsp;·&nbsp; No Hidden Charges
-            </p>
-            <p className="text-white/50 text-xs mt-0.5">
-              Move in by paying the first month only
             </p>
           </div>
         </motion.div>

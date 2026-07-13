@@ -63,3 +63,7 @@ body {
 @media (min-width: 768px) {
   .mobile-sticky-bar { display: none !important; }
 }
+
+section[id] {
+  scroll-margin-top: 72px;
+}

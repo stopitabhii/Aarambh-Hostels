@@ -4,10 +4,10 @@ import { HOSTEL } from '../lib/constants';
 
 const NAV_LINKS = [
   { label: 'About',      href: '#about' },
-  { label: 'Facilities', href: '#facilities' },
-  { label: 'Rooms',      href: '#rooms' },
-  { label: 'Gallery',    href: '#gallery' },
+  { label: 'Services',   href: '#services' },
+  { label: 'Branches',   href: '#branches' },
   { label: 'Location',   href: '#location' },
+  { label: 'FAQ',        href: '#faq' },
   { label: 'Contact',    href: '#contact' },
 ];
 
@@ -38,6 +38,10 @@ export default function Navbar() {
 
   const scrollTo = (href) => {
     setMenuOpen(false);
+    if (window.location.pathname !== '/') {
+      window.location.href = '/' + href;
+      return;
+    }
     document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -62,7 +66,7 @@ export default function Navbar() {
             className="flex items-center gap-2.5 group"
           >
             <img
-              src="/images/logo-2.jpg"
+              src="/images/Hostel-Beta-2/logo-2.jpg"
               alt="Aarambh Hostels logo"
               className="h-8 w-auto rounded"
             />

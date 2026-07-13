@@ -6,8 +6,7 @@ const scrollTo = (href) => document.querySelector(href)?.scrollIntoView({ behavi
 const QUICK_LINKS = [
   { label: 'About',        href: '#about' },
   { label: 'Facilities',   href: '#facilities' },
-  { label: 'Rooms',        href: '#rooms' },
-  { label: 'Gallery',      href: '#gallery' },
+  { label: 'Branches',     href: '#branches' },
   { label: 'Location',     href: '#location' },
   { label: 'FAQ',          href: '#faq' },
   { label: 'Contact',      href: '#contact' },
@@ -24,29 +23,16 @@ export default function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <img
-              src="/images/logo-2.jpg"
+              src="/images/Hostel-Beta-2/logo-2.jpg"
               alt="Aarambh Hostels logo"
               className="h-8 w-auto rounded mb-3"
             />
             <p className="text-sm font-bold text-white mb-0.5">{HOSTEL.name}</p>
             <p className="text-xs text-orange-400 italic mb-4">{HOSTEL.tagline}</p>
             <p className="text-xs leading-relaxed">
-              Premium boys hostel in Greater Noida offering safe, affordable, and comfortable
+              Premium hostel in Greater Noida offering safe, affordable, and comfortable
               living for college students. Safe · Comfortable · Affordable.
             </p>
-            {/* Social placeholders */}
-            <div className="flex gap-2 mt-5">
-              {['f', '📸', '▶️'].map((s) => (
-                <a
-                  key={s}
-                  href="#"
-                  className="w-8 h-8 bg-gray-800 hover:bg-orange-500 rounded-full flex items-center justify-center text-xs transition-colors"
-                  aria-label="Social link"
-                >
-                  {s}
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Quick links */}
