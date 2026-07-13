@@ -67,7 +67,15 @@ export const HOSTELS = [
       phone: '7827374959',
       phone2: '',
       mapsUrl: 'https://maps.google.com/?q=N-5,+Namoli,+Knowledge+Park+III,+Greater+Noida,+UP+201310',
-      images: [],
+      images: [
+        { src: '/images/Hostel-KP-3/hero-building.PNG',  label: 'Building'},
+       { src: '/images/Hostel-KP-3/building.PNG',        label: 'Exterior'},
+       { src: '/images/Hostel-KP-3/double-seater.PNG',   label: 'Bedroom'},
+       { src: '/images/Hostel-KP-3/triple-seater.PNG',   label: 'Bedroom'},
+       { src: '/images/Hostel-KP-3/triple-seater-2.PNG', label: 'Bedroom'}, 
+       { src: '/images/Hostel-KP-3/bathroom.PNG',        label: 'Bathroom'},
+       { src: '/images/Hostel-KP-3/room.PNG',            label: 'room'},
+      ],
       pricing: [
         { label: '2 Seater AC', amount: 160000, period: 'per academic year' },
         { label: '3 Seater AC', amount: 140000, period: 'per academic year' },

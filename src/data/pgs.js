@@ -5,7 +5,7 @@ export const PGS = [
       name: 'Aarambh PG — F-102, Alpha 2',
       tag: '',
       address: 'F-102, Alpha 2, Greater Noida, UP 201310',
-      capacity: 76,
+      capacity: 92,
       facilities: [
         'AC Room with Attached Bathroom',
         'Bed with Mattress & Almirah',
@@ -20,10 +20,12 @@ export const PGS = [
       phone: '7827374959',
       phone2: '7827924959',
       mapsUrl: 'https://maps.google.com/?q=F-102,+Alpha+2,+Greater+Noida,+UP+201310',
-      images: [],
+      images: [
+        { src: '/images/PG-F-102-Alpha-2/hero-building.PNG',    label: 'Building'    },
+      ],
       pricing: [
         { label: '2 Seater AC', amount: 12500, period: 'per month' },
-        { label: '3 Seater AC', amount: 11000, period: 'per month' },
+        { label: '3 Seater AC', amount: 10000, period: 'per month' },
       ],
       pricingNote: 'Security deposit equal to one month rent. Electricity bill extra (prepaid meter).',
       active: true,
@@ -34,7 +36,7 @@ export const PGS = [
       name: 'Aarambh PG — G-36, Alpha 2',
       tag: '',
       address: 'G-36, Alpha 2, Greater Noida, UP 201310',
-      capacity: 76,
+      capacity: 57,
       facilities: [
         'AC Room with Attached Bathroom',
         'Bed with Mattress & Almirah',
@@ -49,10 +51,13 @@ export const PGS = [
       phone: '7827374959',
       phone2: '7827924959',
       mapsUrl: 'https://maps.google.com/?q=G-36,+Alpha+2,+Greater+Noida,+UP+201310',
-      images: [],
+      images: [
+        { src: '/images/PG-G-36-Alpha-2/hero-building.PNG',    label: 'Building'    },
+      ],
       pricing: [
         { label: '2 Seater AC', amount: 12500, period: 'per month' },
-        { label: '3 Seater AC', amount: 11000, period: 'per month' },
+        { label: '3 Seater AC', amount: 10000, period: 'per month' },
+        { label: '4 Seater AC', amount: 8000,  period: 'per month' },
       ],
       pricingNote: 'Security deposit equal to one month rent. Electricity bill extra (prepaid meter).',
       active: true,
@@ -63,7 +68,7 @@ export const PGS = [
       name: 'Aarambh PG — G-38, Alpha 2',
       tag: '',
       address: 'G-38, Alpha 2, Greater Noida, UP 201310',
-      capacity: 76,
+      capacity: 75,
       facilities: [
         'AC Room with Attached Bathroom',
         'Bed with Mattress & Almirah',
@@ -78,10 +83,14 @@ export const PGS = [
       phone: '7827374959',
       phone2: '7827924959',
       mapsUrl: 'https://maps.google.com/?q=G-38,+Alpha+2,+Greater+Noida,+UP+201310',
-      images: [],
+      images: [
+        { src: '/images/PG-G-38-Alpha-2/hero-building.PNG',    label: 'Building'    },
+      ],
       pricing: [
+        { label: 'Single Seater AC', amount: 16000, period: 'per month' },
         { label: '2 Seater AC', amount: 12500, period: 'per month' },
         { label: '3 Seater AC', amount: 11000, period: 'per month' },
+        { label: '4 Seater AC', amount: 8000,  period: 'per month' },
       ],
       pricingNote: 'Security deposit equal to one month rent. Electricity bill extra (prepaid meter).',
       active: true,
@@ -107,10 +116,12 @@ export const PGS = [
       phone: '7827374959',
       phone2: '7827924959',
       mapsUrl: 'https://maps.google.com/?q=I-586,+Alpha+2,+Greater+Noida,+UP+201310',
-      images: [],
+      images: [
+        { src: '/images/PG-I-586-87-Alpha-2/hero-building.PNG',    label: 'Building'    },
+      ],
       pricing: [
         { label: '2 Seater AC', amount: 12500, period: 'per month' },
-        { label: '3 Seater AC', amount: 11000, period: 'per month' },
+        { label: '3 Seater AC', amount: 10000, period: 'per month' },
       ],
       pricingNote: 'Security deposit equal to one month rent. Electricity bill extra (prepaid meter).',
       active: true,

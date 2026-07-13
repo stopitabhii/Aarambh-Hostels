@@ -7,7 +7,9 @@ export const CAFES = [
       phone: '7827024959',
       phone2: '7827124959',
       mapsUrl: 'https://maps.google.com/?q=H-181,+Beta+2+Block+H+Rd,+Block+H,+Beta+II,+Greater+Noida,+Uttar+Pradesh+201310',
-      images: [],
+      images: [
+        { src: '/images/cafe.PNG',  label: 'Cafe'},
+      ],
       active: true,
     },
     {
@@ -18,7 +20,9 @@ export const CAFES = [
       phone: '7827374959',
       phone2: '7827924959',
       mapsUrl: 'https://maps.google.com/?q=N-5,+Namoli,+Knowledge+Park+III,+Greater+Noida,+UP+201310',
-      images: [],
+      images: [
+        { src: '/images/cafe.PNG',  label: 'Cafe'},
+      ],
       active: true,
     },
   ];

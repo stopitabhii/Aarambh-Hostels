@@ -17,11 +17,13 @@ const ABOUT_IMAGES = [
   { src: '/images/office.PNG',                                      label: 'Director - office'    },
   { src: '/images/warden-office.PNG',                               label: 'warden - office'      },
   { src: '/images/Hostel-Beta-2/students-with-building.PNG',        label: 'Aarambh-Residents'    },
-  { src: '/images/social-cause.PNG',                                label: 'Social - Cause'       },
-  { src: '/images/Hostel-Beta-2/building-side.jpg',                 label: 'Hostel — Beta 2'      },
-  { src: '/images/PG-A-42-Beta-1/hero-building.jpg',                label: 'PG — A-42, Beta 1'    },
   { src: '/images/students.PNG',                                    label: 'Aarambh-Residents'    },
-  { src: '/images/mess.PNG',                                        label: 'Life at Aarambh'      },
+  { src: '/images/Hostel-Beta-2/building-side.jpg',                 label: 'Hostel — Beta 2'      },
+  { src: '/images/PG-F-102-Alpha-2/hero-building.PNG',              label: 'PG — F-102, Alpha 2'  },
+  { src: '/images/PG-G-36-Alpha-2/hero-building.PNG',               label: 'PG — G-36, Alpha 2'   },
+  { src: '/images/PG-G-38-Alpha-2/hero-building.PNG',               label: 'PG — G-38, Alpha 2'   },
+  { src: '/images/social-cause.PNG',                                label: 'Social - Cause'       },
+  { src: '/images/mess.PNG',                                        label: 'Mess'                 },
 ];
 
 export default function About() {
@@ -50,7 +52,7 @@ export default function About() {
             key={img.src}
             src={img.src}
             alt={img.label}
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-990 ${
              i === current ? 'opacity-100' : 'opacity-0'
             }`}
             loading="lazy"
